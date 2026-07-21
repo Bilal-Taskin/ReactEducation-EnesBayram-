@@ -1,0 +1,6 @@
+3 öneli yapısı var
+-component
+-porps
+-state management
+
+react = javascript+ html
