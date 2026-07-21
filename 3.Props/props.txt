@@ -1,0 +1,1 @@
+Bir componentden diğerine veri taşımaya props denir
