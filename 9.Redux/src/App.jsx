@@ -2,12 +2,9 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"; //store içindeki state istenilen yerden erişimi sağlayan hooklar bunlardır. useSelector state, useDispatch ise fksiyonlara erşimemizi sağlayan hooklardır
 import "./App.css";
 import { decrement, increment } from "./redux/counterSlice";
+import UserList from "./UserList";
 
-function App() {
-  //const state = useSelector((store) => store.counter);
-  //yukarıdakinin object distructingli hali
-
-  /*
+/*
   çalşıma mantığı
   
   useSelector ile ilk parametre olan storu çektik, storun içinde bulunan countera eriştik.
@@ -16,16 +13,21 @@ function App() {
 
   Bir sliceın içindeki state değerine yukarıda açıklandığı gibi erişilir. Fonksiyona ise dispatch ile erişiriz
 
-  
-  
-  
-  */
+ */
+
+function App() {
+  //const state = useSelector((store) => store.counter);
+  //yukarıdakinin object distructingli hali
+
   const { value } = useSelector((store) => store.counter);
   console.log(value);
 
   const dispatch = useDispatch();
   return (
     <>
+      <div>
+        <UserList />
+      </div>
       <div>
         <div>{value}</div>
         <button onClick={() => dispatch(increment())}>Arttir</button>
