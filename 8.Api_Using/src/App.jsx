@@ -1,8 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-
 import "./App.css";
 import { useEffect } from "react";
+
+// await: "Fonksiyonun içindeki bu asenkron işlem bitene kadar alt satıra geçme, bekle."
+
+// async: "Bu fonksiyonun kendisi asenkron bir iş yapıyor ve dışarıya bir Promise döndürecek. Ayrıca içinde await kullanmama izin ver."
 
 //bu programın çalışması için aynı anda json.server ve react ayakta olmalı. Çünkü verilerimiz json.server tarafından izlenen data.json dosyasından çekiliyor
 

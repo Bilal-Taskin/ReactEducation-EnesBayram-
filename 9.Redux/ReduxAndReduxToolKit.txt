@@ -1,0 +1,28 @@
+Redux ve Redux Toolkit (RTK), özellikle React gibi modern JavaScript kütüphanelerinde uygulama genelindeki verileri (state) tek bir merkezden yönetmek için kullanılan araçlardır.
+
+
+1. Redux Nedir?
+Redux, JavaScript uygulamalarında durum yönetimini (state management) tek bir noktada toplayan açık kaynaklı bir kütüphanedir.
+
+Büyük ölçekli projelerde verinin bileşenler (components) arasında dededen toruna aktarılır gibi iletilmesi (buna prop drilling denir) işleri çok karıştırır. Redux, tüm veriyi uygulamanın ortasında "Store" adı verilen tek bir depoda tutar.,
+
+
+Redux Nasıl Çalışır? (3 Ana Kavram)
+1-Store (Depo): Uygulamanın tüm durum verilerinin saklandığı tek merkez.
+
+2-Action (Eylem): Ne yapılacağını bildiren haberci obje (Örn: { type: 'SEPETE_EKLE', payload: urun }).
+
+3-Reducer (İşleyici): Mevcut state ve gelen Action'ı alıp, yeni state'i üreten saf fonksiyonlar (pure functions).
+
+
+
+2. Redux Toolkit (RTK) Nedir?
+Redux Toolkit, Redux ekibinin "Redux yazmanın resmi ve standart yolu" olarak geliştirdiği modern bir paket paketidir. Redux'ın karmaşıklığını ve uzun kod yazma ihtiyacını ortadan kaldırmak için tasarlanmıştır.
+
+Günümüzde yeni bir projeye başlarken ham (vanilla) Redux yerine kesinlikle Redux Toolkit kullanılır.
+
+
+Özet Fark
+Redux: Temel mimari ve mantıktır (Motor).
+
+Redux Toolkit: Redux'ı çok daha hızlı, güvenli ve az kodla yazmanızı sağlayan modern standart araç setidir (Arabaya eklenen hazır otomatik vites ve navigasyon gibi).
