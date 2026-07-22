@@ -1,0 +1,125 @@
+Union Types: şu veya şu (|)
+let age string | number | boolean = true
+
+---------------------------------
+
+Literal Types = değişkene sadece şu değerlerden biri setlenebilir
+let status : 'pending'|'fulfilled'|'rejected'
+
+----------------------------------
+
+Array
+let names : string [] = ["enes","bilal"]
+let mixedAray : (string|number)["bilal",1]
+
+-----------------------------------
+
+Interface ve type kendi tipimizi oluşturmamızı sağlar
+
+
+TYPE=>
+
+type User = {
+    name:String,
+    age:number
+}
+
+const object1:User = {
+    name="Bilal",
+    age="22"
+}
+
+let array: User[]=[{name:"Bilal", age:22}]
+
+
+INERFACE=>
+
+Inerfaceler typden farklı olarak extend edilebiliyorlar
+
+Interface User{
+    name:String,
+    age:number
+}
+
+const object1: User = {
+    name="Bilal",
+    age="22"
+}
+
+let array: User[]=[{name:"Bilal", age:22}]
+
+-----------------------------------
+
+Optional Types ?
+
+Interface User{
+    name:String,
+    age?:number
+}
+
+-----------------------------------
+
+Functions:
+
+function topla(a:number, b:number):number{
+    return a+b;
+}
+
+
+-----------------------------------
+
+generic types:
+ <T>, kullanımını kodlar ile daha rahat anlarsın. Tip bağımsızlığı saplıyor
+
+------------------------------------
+
+Partial,Requried ,readonly, pick, omit
+
+Partial opsiyonel yapar:
+
+interface User{
+    name:string,
+    age:number,
+    lastName:number,
+    tckn:string,
+    birthdate: string
+}
+
+//hepsine ? koymanın önğne geçer 
+const user1 : Partial<Urer>={
+    name = "enes",
+}
+
+
+//hepsine doldurmak zorunda bırakır
+const user2 : Required<Urer>={
+    name = "enes",
+}
+
+
+//sadece okunabilir yapar
+const user3 : ReadOnly<Urer>={
+    name = "enes",
+}
+//burası hata veriri
+user3.name="bilal"
+
+
+
+//pick toplamak demek. Obje içindeki fildlardan sadece birine odaklanır
+const user3 : Pick<User, "name" >={
+    name = "enes",
+}
+
+
+//omitden pickin tersidir. Verieln filed dışındakileri anlar
+
+const user3 : Omit<Urer, name>={
+    age:"12"; 
+    .
+    .
+    .
+    }
+
+
+
